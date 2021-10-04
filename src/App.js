@@ -8,13 +8,11 @@ import Footer from './common/Footer';
 
 function App() {
   return (
-    <div className="App">
-      <BrowserRouter>
-        <Header />
-        <Main />
-        <Footer />
-      </BrowserRouter>
-    </div>
+    <BrowserRouter>
+      <Header />
+      <Main />
+      <Footer />
+    </BrowserRouter>
   );
 }
 

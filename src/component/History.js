@@ -1,9 +1,15 @@
 import React from 'react';
+import './History.css';
 
-const History = () => {
+const History = ({ historyHeight }) => {
+    const historyStyle = {
+        height: historyHeight + "px"
+    }
+
     return (
-        <section>
-            
+        <section 
+            class="history"
+            style={historyStyle}>
         </section>
     );
 }

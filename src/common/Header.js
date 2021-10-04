@@ -1,20 +1,33 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import './Header.css';
+import { NavLink } from 'react-router-dom';
 
 const Header = () => {
+
+    const navActiveStyle = {
+        color: 'cyan'
+    };
+
     return (
         <header>
-            <h1>MSM</h1>
+            <h1 class="header__title">MSM</h1>
             <nav>
-                <ul>
-                    <li>
-                        <Link to="/">배치</Link>
+                <ul class="nav__list">
+                    <li class="nav__link">
+                        <NavLink
+                            exact
+                            to="/"
+                            activeStyle={navActiveStyle}>배치</NavLink>
                     </li>
-                    <li>
-                        <Link to="/music">악보</Link>
+                    <li class="nav__link">
+                        <NavLink
+                            to="/music"
+                            activeStyle={navActiveStyle}>악보</NavLink>
                     </li>
-                    <li>
-                        <Link to="/setting">설정</Link>
+                    <li class="nav__link">
+                        <NavLink
+                            to="/setting"
+                            activeStyle={navActiveStyle}>설정</NavLink>
                     </li>
                 </ul>
             </nav>

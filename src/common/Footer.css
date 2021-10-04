@@ -1,0 +1,10 @@
+footer {
+    position: relative;
+    display: flex;
+    padding: 10px;
+    width: 100%;
+    height: 40px;
+    box-sizing: border-box;
+    background-color: #181717;
+    color: #DDDDDD;
+}

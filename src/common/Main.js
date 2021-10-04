@@ -1,4 +1,6 @@
 import React from 'react';
+import { useState } from 'react';
+import './Main.css';
 
 import Stage from '../page/Stage';
 import Music from '../page/Music';
@@ -7,11 +9,14 @@ import History from '../component/History';
 import { Route, Switch } from 'react-router-dom';
 
 const Main = () => {
+    const [dragHeight, setDragHeight] = useState(300);
+
+    console.log("dd: " + dragHeight);
     return (
         <main>
             <Switch>
                 <Route exact path="/">
-                    <Stage />
+                    <Stage historyHeight={dragHeight}/>
                 </Route>
                 <Route path="/music">
                     <Music />
@@ -20,7 +25,7 @@ const Main = () => {
                     <Setting />
                 </Route>
             </Switch>
-            <History />
+            <History historyHeight={dragHeight} />
         </main>
     )
 }
